@@ -1,0 +1,21 @@
+<h1>
+  YELP.COM
+</h1>
+<a href="<%= restaurants_path %>"<button class="btn btn-primary">All Restaurants</button></a>
+
+<%= link_to "Add Review", new_restaurant_review_path(@restaurant), class: "btn btn-primary"%>
+
+
+<h2><%= @restaurant.name %></h2>
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.phone_number %></p>
+<p><%= @restaurant.category %></p>
+
+
+
+
+<h3>Reviews</h3>
+<% @restaurant.reviews.each do |review| %>
+  <p><%= review.content %></p>
+  <p><%= review.rating %></p>
+<% end %> 

@@ -1,0 +1,10 @@
+<h1>
+  YELP.COM
+</h1>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant), class: "" %></li>
+  <% end %>
+</ul>
+<%= link_to "Add Restaurant", new_restaurant_path, class: "btn btn-primary" %>
